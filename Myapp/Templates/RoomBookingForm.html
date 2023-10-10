@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <title>Guest House</title>
+    <style>
+        .roomhead{
+            margin-top: 20px;
+            margin-bottom: 40px;
+        }
+        .navbar {
+            background-color: #6497b1;
+                }
+        .navbar-nav .nav-item .nav-link {
+            color: white;
+                }
+        .container{
+            margin-top: 40px;
+            margin-bottom: 30px;
+        }
+    </style>
+  </head>
+  <body>
+    <!--this is a change-->
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="Home.html">
+          <img src="img\logo.png" alt="logo" width="53px" height="53px" />
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="Home.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="roombook.html">Room</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Fooding.html">Food</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="AboutUs.html">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Log_In/login.html">Log in</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Room booking form is here -->
+
+    <div class="container">
+        <div class="card">
+            <div class="card-body">
+                <h1 class="card-title">Room Booking</h1><br>
+                <p class="card-text">Fill in your details to book a room.</p>
+
+                <form action="process_booking.php" method="post">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Name:</label>
+                        <input type="text" placeholder="Enter name" id="name" name="name" class="form-control" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email:</label>
+                        <input type="email" id="email" placeholder="Enter email" name "email" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="roomno" class="form-label">Room Number:</label>
+                        <input type="text" id="roomno" placeholder="Room No: F5" name ="roomno" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="room-type" class="form-label">Room Type:</label>
+                        <select id="room-type" name="room-type" class="form-select">
+                            <option value="single">Single Room</option>
+                            <option value="double">Double Room</option>
+                        </select>
+                    </div>
+
+                     <!-- to add more people to book a room-->  <br>
+                    <p>Select The number of people you are booking for accordingly fill up the details</p>
+                     <div class="mb-3 ">
+                        <input type="radio" name="num_people" value="1" checked id="one_person"> 1 person
+                        <input type="radio" name="num_people" value="2"  id="two_person"> 2 people
+                        <input type="radio" name="num_people" value="3"  id="three_person"> 3 people
+                      </div>
+                      <div class="mb-3 person-inputs" id="person_2_inputs" style="display: none;">
+                        <br>
+                        <p>2. Enter details for the Second person</p>
+                        <label for="person_2_name">Name:</label>
+                        <input type="text" class="form-control" placeholder="Enter name of second person" size="25" name="person_2_name" id="person_2_name"><br>
+                    
+                        <label for="person_2_email">Email:</label>
+                        <input type="email" name="person_2_email" class="form-control" placeholder="Enter email of second person" id="person_2_email"><br>
+                    
+                        <label for="person_2_phone">Phone number:</label>
+                        <input type="tel" name="person_2_phone" class="form-control" placeholder="Enter phone no of second person" id="person_2_phone"><br>
+                      </div>
+                    
+                      <div class="mb-3 person-inputs" id="person_3_inputs" style="display: none;">
+                        <p>3. Enter the details of the Third person</p>
+                        <label for="person_3_name">Name:</label>
+                        <input type="text" name="person_3_name" class="form-control" placeholder="Enter name of third person"id="person_3_name"><br>
+                    
+                        <label for="person_3_email">Email:</label>
+                        <input type="email" name="person_3_email" class="form-control" placeholder="Enter email of third person" id="person_3_email"><br>
+                    
+                        <label for="person_3_phone">Phone number:</label>
+                        <input type="tel" name="person_3_phone" class="form-control" placeholder="Enter phone number of third person" id="person_3_phone"><br>
+                      </div><br>
+
+
+
+
+                    <div class="mb-3">
+                        <label for="check-in-date" class="form-label">Check-In Date:</label>
+                        <input type="date" id="check-in-date" name="check-in-date" class="form-control" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="check-out-date" class="form-label">Check-Out Date:</label>
+                        <input type="date" id="check-out-date" name="check-out-date" class="form-control" required>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Book Room</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <footer class="text-center text-lg-start text-white" style="background-color: #1c2331">
+      <section class="d-flex justify-content-between p-4" style="background-color: #6497b1">
+        <div class="me-5">
+          <span>Get connected with us on social networks:</span>
+        </div>
+        <div>
+          <a href="https://www.facebook.com/CST.University" class="text-white me-4"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://cst.edu.bt/index.php/en/" class="text-white me-4"><i class="fab fa-google"></i></a>
+          <a href="https://www.instagram.com/cst_rub/?igshid=NTc4MTIwNjQ2YQ%3D%3D&fbclid=IwAR1jyGwQ6RvlDxm9n8XBy8kpdLQeMdQLZ-M-YUoV9P9NKcm6NGMgj1tvQsk" class="text-white me-4"><i class="fab fa-instagram"></i></a>
+        </div>
+      </section>
+      <section class="">
+        <div class="container text-center text-md-start mt-5">
+          <!-- Grid row -->
+          <div class="row mt-3">
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+              <!-- Content -->
+              <img src="Room booking\logo.png" alt="" />
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+              <!-- Links -->
+              <h6 class="text-uppercase fw-bold">ABOUT</h6>
+              <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: #7c4dff; height: 2px" />
+              <p>
+                <a href="#!" class="text-white">About</a>
+              </p>
+              <p>
+                <a href="#!" class="text-white">Contact</a>
+              </p>
+              <p>
+                <a href="#!" class="text-white">Room</a>
+              </p>
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+              <!-- Links -->
+              <h6 class="text-uppercase fw-bold">Useful links</h6>
+              <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: #7c4dff; height: 2px" />
+              <p>
+                <a href="https://cst.edu.bt/index.php/en/" class="text-white">CST</a>
+              </p>
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+              <!-- Links -->
+              <h6 class="text-uppercase fw-bold">Contact</h6>
+              <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: #7c4dff; height: 2px" />
+              <p><i class="fas fa-home mr-3"></i> Rinchending, Chukha</p>
+              <p><i class="fas fa-envelope mr-3"></i> cstguest@gmail.com</p>
+              <p><i class="fas fa-phone mr-3"></i> + 975 17889991</p>
+              <p><i class="fas fa-phone mr-3"></i> + 975 17684523</p>
+            </div>
+            <!-- Grid column -->
+          </div>
+          <!-- Grid row -->
+        </div>
+      </section>
+      <!-- Rest of your footer content here -->
+    </footer>
+
+    <script>
+        
+
+        const radioButtonOnePerson = document.getElementById("one_person");
+        const radioButtonTwoPerson = document.getElementById("two_person");
+        const radioButtonThreePerson = document.getElementById("three_person");
+
+        const two_person_div =  document.getElementById("person_2_inputs");
+        const three_person_div =  document.getElementById("person_3_inputs");
+
+        radioButtonOnePerson.onclick = () => {
+            two_person_div.style.display = 'none';
+            three_person_div.style.display = 'none';
+        }
+
+        radioButtonTwoPerson.onclick = () => {
+            two_person_div.style.display = 'block';
+            three_person_div.style.display = 'none';
+        }
+
+        radioButtonThreePerson.onclick = () => {
+            two_person_div.style.display = 'block';
+            three_person_div.style.display = 'block';
+        }
+       
+      </script>
+    
+  </body>
+</html>

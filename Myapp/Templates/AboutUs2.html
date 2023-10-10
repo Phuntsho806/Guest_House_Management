@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+  }
+  nav {
+    background-color: blue;
+    color: #fff;
+    padding: 1rem 0;
+    padding-right: 1rem;
+    text-align: right;
+  }
+  ul.nav-list {
+    list-style: none;
+    display: inline;
+    margin: 0;
+    padding: 0;
+  }
+  ul.nav-list li {
+    margin-right: 1rem;
+    display: inline;
+  }
+  ul.nav-list li:last-child {
+    margin-right: 0;
+  }
+  ul.nav-list li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+  }
+  .container {
+    max-width: 800px;
+    margin: 1cm auto; /* Adjust the margin */
+    padding: 2rem;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    text-align: center; /* Center-align the content within the container */
+  }
+  .about-heading {
+    margin-bottom: 1cm; /* Adjust the margin */
+  }
+  .about-text {
+    line-height: 1.6;
+    margin-top: 1cm; /* Adjust the margin */
+    text-align: left; /* Left-align the text */
+  }
+  .team-members {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left: 1cm; /* Adjust the margin */
+  }
+  .team-row {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+  .team-member {
+    flex-basis: calc(50% - 1rem);
+    margin-right: 1rem;
+    display: flex;
+    align-items: center;
+  }
+  .team-member:last-child {
+    margin-right: 0;
+  }
+  .team-member img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 1rem;
+  }
+
+  /* Media Queries for Responsiveness */
+  @media screen and (max-width: 768px) {
+    .team-member {
+      flex-basis: 100%;
+      margin-right: 0;
+    }
+    .team-member:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .owner-photo {
+    width: 83mm; /* Enlarged by 3mm */
+    height: 83mm; /* Enlarged by 3mm */
+    border-radius: 50%;
+    margin: 0 auto;
+    margin-top: 1rem; /* Adjust the margin */
+    overflow: hidden;
+  }
+
+  .owner-photo img {
+    width: 100%;
+    height: auto;
+  }
+</style>
+</head>
+<body>
+  <nav>
+    <ul class="nav-list">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Food</a></li>
+      <li><a href="#">Room</a></li>
+      <li><a href="#">Contact</a></li>
+      <li><a href="#">Sign Up</a></li>
+    </ul>
+  </nav>
+  <div class="container">
+    <h2 class="about-heading">About Us</h2>
+    <div class="owner-photo">
+      <img src="C:\Users\USER\Downloads\386468704_153295264502351_6322372976300369350_n.jpg" alt="Owner Photo">
+    </div>
+    <p class="about-text">
+      Discover CST Guest House, your retreat of tranquility in the heart of Rinchending. Our mission is to provide a home away from home, where modern comforts blend seamlessly with genuine hospitality.
+    </p>
+    <p class="about-text">
+      With 10 thoughtfully designed bedrooms, each adorned with plush linens, CST Guest House offers a haven of rest and rejuvenation. Our fully equipped kitchen invites you to create and savor memorable meals, while our inviting outdoor spaces provide a picturesque backdrop for relaxation.
+    </p>
+    <p class="about-text">
+      At CST Guest House, we don't just offer accommodations – we offer an experience. Our attentive staff is dedicated to making your stay seamless, whether it's offering local insights or ensuring your comfort. Your journey becomes our shared story, and we're honored to be a part of it.
+    </p>
+    <p class="about-text">
+      Escape to CST Guest House and immerse yourself in the charm of Rinchending. Your path to cherished memories starts with us. Book your stay today and let the adventure unfold.
+    </p>
+    <h2>Our Team</h2>
+    <div class="team-members">
+      <div class="team-row">
+        <div class="team-member">
+          <img src="team_member1.jpg" alt="Team Member 1">
+          <div>
+            <h3>Phuntsho Wangmo</h3>
+            <p>Team Leader</p>
+          </div>
+        </div>
+      </div>
+      <div class="team-row">
+        <div class="team-member">
+          <img src="team_member2.jpg" alt="Team Member 2">
+          <div>
+            <h3>Nima Yoezer</h3>
+            <p>Developer</p>
+          </div>
+        </div>
+        <div class="team-member">
+          <img src="team_member3.jpg" alt="Team Member 3">
+          <div>
+            <h3>Kinley Tenzin</h3>
+            <p>Developer</p>
+          </div>
+        </div>
+      </div>
+      <div class="team-row">
+        <div class="team-member">
+          <img src="team_member4.jpg" alt="Team Member 4">
+          <div>
+            <h3>Tenzin Yoezer</h3>
+            <p>Developer</p>
+          </div>
+        </div>
+        <div class="team-member">
+          <img src="team_member5.jpg" alt="Team Member 5">
+          <div>
+            <h3>Tshewang Bomjan</h3>
+            <p>Developer</p>
+          </div>
+        </div>
+      </div>
+      <!-- Add more team rows or members as needed -->
+    </div>
+  </div>
+</body>
+</html>
